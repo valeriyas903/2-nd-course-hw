@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="header__img">
             <picture>
                 <source media="(min-width: 768px)" srcset="svg/big.svg">
@@ -22,22 +22,22 @@
                 на мой сайт мини-игр</h1>
             <p class="top__text">Тебе предстоит пройти несколько увлекательных игр.
                 Если готов, нажимай <strong>«Поехали!» </strong> и <strong>приступай</strong>.</p>
-            <button type="button" class="top__button">Поехали!</button>
+            <button type="button" class="top__button" onclick="location.href='#games'">Поехали!</button>
         </div>
         <div class="header__animation">
             <ul class="header__list">
-                <li class="header__list list">ВИКТОРИНА</li>
-                <li class="header__list list">УГАДАЙ ЧИСЛО</li>
-                <li class="header__list list">ПЕРЕВЕРНИ ТЕКСТ</li>
-                <li class="header__list list">ПРОСТАЯ АРИФМЕТИКА</li>
-                <li class="header__list list">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</li>
-                <li class="header__list list">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
-                <li class="header__list list">ВИКТОРИНА</li>
-                <li class="header__list list">УГАДАЙ ЧИСЛО</li>
-                <li class="header__list list">ПЕРЕВЕРНИ ТЕКСТ</li>
-                <li class="header__list list">ПРОСТАЯ АРИФМЕТИКА</li>
-                <li class="header__list list">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</li>
-                <li class="header__list list">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
+                <li class="header__list-item">ВИКТОРИНА</li>
+                <li class="header__list-item">УГАДАЙ ЧИСЛО</li>
+                <li class="header__list-item">ПЕРЕВЕРНИ ТЕКСТ</li>
+                <li class="header__list-item">ПРОСТАЯ АРИФМЕТИКА</li>
+                <li class="header__list-item">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</li>
+                <li class="header__list-item">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
+                <li class="header__list-item">ВИКТОРИНА</li>
+                <li class="header__list-item">УГАДАЙ ЧИСЛО</li>
+                <li class="header__list-item">ПЕРЕВЕРНИ ТЕКСТ</li>
+                <li class="header__list-item">ПРОСТАЯ АРИФМЕТИКА</li>
+                <li class="header__list-item">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</li>
+                <li class="header__list-item">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
             </ul>
         </div>
     </header>
@@ -104,7 +104,7 @@
                     </article>
                 </div>
             </section>
-            <section class="main__games">
+            <section class="main__games" id="games">
                 <h2 class="main__title">Мини игры</h2>
                 <div class="main__games-container" id="guess-number">
                     <img src="img/gues-num.png" alt="guess-number" class="main__games-img">
