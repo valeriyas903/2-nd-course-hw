@@ -7,6 +7,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+}
+
+button {
+  font-family: inherit;
 }
 
 html {
@@ -34,31 +39,45 @@ button:hover {
   color: #000000;
 }
 
-header {
-  display: flex;
+.header {
   position: relative;
-  width: 100%;
-  height: 800px;
   background-color: #e1ff8f;
-  padding: 195px 0 246px 0;
   overflow: hidden;
+  height: 800px;
 }
-header .header__img {
-  height: auto;
-  z-index: 1;
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 196px;
 }
-header .header__img picture,
-header .header__img img {
+.header__img {
   position: absolute;
   top: 0;
   right: 0;
   width: 750px;
   height: 791px;
+  z-index: 2;
+}
+.header__img picture,
+.header__img img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-header .header__animation {
+.header__img-left {
+  position: absolute;
+  top: 69px;
+  left: 63px;
+}
+.header__img-right {
+  position: absolute;
+  bottom: 149px;
+  right: 344px;
+}
+.header__animation {
   position: absolute;
   top: 710px;
   left: 0;
@@ -68,7 +87,7 @@ header .header__animation {
   z-index: 2;
   overflow: hidden;
 }
-header .header__animation ul {
+.header__animation ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -80,7 +99,7 @@ header .header__animation ul {
   height: 90px;
   max-width: 3220px;
 }
-header .header__animation li {
+.header__animation li {
   font-size: 30px;
   font-weight: 700;
   line-height: 110%;
@@ -89,7 +108,7 @@ header .header__animation li {
   display: flex;
   align-items: center;
 }
-header .header__animation li:not(:last-child)::after {
+.header__animation li:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: 36px;
@@ -97,21 +116,22 @@ header .header__animation li:not(:last-child)::after {
   background: url("svg/star.svg") center/contain no-repeat;
   margin-left: 51px;
 }
-header .top {
+
+.top {
   position: relative;
   z-index: 3;
   max-width: 768px;
-  margin: 0 auto;
 }
-header .top__title {
+.top__title {
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 24px;
 }
-header .top__text {
+.top__text {
   font-size: 24px;
   font-weight: 400;
   padding-bottom: 48px;
+  width: 700px;
 }
 
 @keyframes marquee {
@@ -123,8 +143,16 @@ header .top__text {
   }
 }
 .main {
-  background-color: #000000;
   position: relative;
+  width: 100%;
+}
+.main__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 0;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
 }
 .main__img-star {
   position: absolute;
@@ -132,7 +160,7 @@ header .top__text {
   right: 0;
   width: 585px;
   height: 585px;
-  z-index: 2;
+  z-index: -1;
 }
 .main__title {
   font-size: 64px;
@@ -146,25 +174,12 @@ header .top__text {
   font-size: 24px;
   font-weight: 400;
 }
-.main__container {
-  color: #ffffff;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 96px 0;
-  display: flex;
-  flex-direction: column;
-}
 .main__container-articles {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: center;
-}
-.main__container__link {
-  display: block;
-  text-decoration: none;
-  color: #000000;
 }
 .main__container-article {
   width: 378px;
@@ -185,15 +200,15 @@ header .top__text {
 .main__container-img {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 30px;
-  min-width: 100%;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
   display: block;
 }
 .main__container-text {
   margin-top: 32px;
   margin-bottom: 16px;
   font-size: 16px;
-  font-family: 500;
+  font-weight: 500;
   color: #000000;
   width: 107px;
   margin-left: 32px;
@@ -220,11 +235,11 @@ header .top__text {
   flex-direction: row;
   gap: 32px;
   justify-content: center;
-  width: 100%;
   height: 500px;
-  margin: 0 auto;
   background-color: #fff;
   border-radius: 30px;
+  width: auto;
+  margin: 0;
 }
 .main__games-info {
   display: flex;
@@ -267,18 +282,11 @@ header .top__text {
 .main__container-article:nth-child(4),
 .main__container-article:nth-child(6) {
   height: 551px;
-}
-
-.main__container-article:nth-child(4),
-.main__container-article:nth-child(6) {
   margin-top: -40px;
 }
 
 .main__games-container:nth-child(even) {
   flex-direction: row-reverse;
-}
-
-.main__games-container:nth-child(even) {
   padding-left: 48px;
 }
 
