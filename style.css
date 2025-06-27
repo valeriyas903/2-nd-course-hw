@@ -149,7 +149,7 @@ button:hover {
 .main__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 96px 0;
+  padding: 94px 0;
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -158,8 +158,25 @@ button:hover {
   position: absolute;
   top: 77px;
   right: 0;
-  width: 585px;
   height: 585px;
+  z-index: -1;
+}
+.main__stars-left {
+  position: absolute;
+  top: 770px;
+  left: 25px;
+  z-index: -1;
+}
+.main__stars-right {
+  position: absolute;
+  top: 1563px;
+  right: 45px;
+  z-index: -1;
+}
+.main__stars-bottom {
+  position: absolute;
+  bottom: 45px;
+  right: 52px;
   z-index: -1;
 }
 .main__title {
