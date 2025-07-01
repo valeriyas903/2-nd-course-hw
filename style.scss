@@ -280,7 +280,6 @@ button:hover {
       height: 500px;
       background-color: #fff;
       border-radius: 30px;
-      width: auto;
       margin: 0;
     }
 
@@ -335,6 +334,7 @@ button:hover {
 .main__games-container:nth-child(even) {
   flex-direction: row-reverse;
   padding-left: 48px;
+
 }
 
 footer {
@@ -347,3 +347,6 @@ footer {
   justify-content: center;
   align-content: center;
 }
+
+
+@import 'mobile';
