@@ -1,0 +1,143 @@
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 700px;
+
+    &__container {
+      padding: 17px 147px 16px 182px;
+    }
+    &__img {
+      width: 224px;
+      height: 239px;
+
+      &-right {
+        z-index: 1;
+        bottom: 79px;
+        right: 34px;
+      
+      }
+    }
+
+    &__animation {
+      top: 649px;
+
+      ul {
+        height: 51px;
+      }
+    }
+  }
+
+  .top {
+    &__title {
+      font-size: 40px;
+      text-align: center;
+    }
+    &__text {
+      font-size: 16px;
+      max-width: 296px;
+      text-align: center;
+    }
+
+    &__button {
+      width: 285px;
+      height: 55px;
+    }
+  }
+  .main__img-star,
+  .main__stars-right,
+  .main__stars-bottom,
+  .main__stars-left,
+  .main__container-about,
+  .main__container-articles {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 40px;
+  }
+  .main__container {
+    padding: 0;
+  }
+  .main__games {
+    flex-direction: column;
+    margin-top: 48px;
+    align-content: center;
+
+    &-title {
+      font-size: 32px;
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+
+    &-info {
+      padding: 0 28px;
+      gap: 16px;
+    }
+
+    &-container {
+      gap: 16px;
+      width: 343px;
+      height: 528px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    &-btn {
+      height: 55px;
+      width: 285px;
+    }
+  }
+
+  .main__games-container:nth-child(even) {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    width: 343px;
+    height: 528px;
+  }
+
+  .main__games-container:last-child {
+    margin-bottom: 10px;
+  }
+
+  #rock-paper-scissors.main__games-container {
+    height: 580px;
+  }
+
+  #random-color-generator.main__games-container {
+    height: 626px;
+  }
+
+  footer {
+    height: 100px;
+  }
+
+  button,
+  .main__games-btn,
+  .top__button {
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    width: 285px;
+    height: 55px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 24px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+
+  button:hover,
+  .main__games-btn:hover,
+  .top__button:hover {
+    background-color: #070707;
+    color: #ffffff;
+  }
+}
