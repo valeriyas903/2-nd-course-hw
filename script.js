@@ -1,46 +1,59 @@
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
+let password = 'пароль';
+let userPassword = prompt("Введите пароль");
 
-let iphoneRelease = 2007;
-alert(iphoneRelease);
-
-let jsCreator = "Brendan Eich";
-alert(jsCreator);
-
-let num1 = 10;
-let num2 = 2;
-
-alert(num1 + num2);
-alert(num1 - num2); 
-alert(num1 * num2); 
-alert(num1 / num2);
-
-let result = 2 ** 5;
-alert(result);
-
-let c = 9;
-let b = 2;
-alert(c % b);
-
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num++;
-num--;
-alert(num);
-
-let age = prompt("Сколько вам лет");
-alert(age)
-
-let user = {
-    name: "Valerie",
-    age: 37,
-    isAdmin: true
+if (userPassword === password) {
+  alert("Пароль введен верно");
+} else {
+  alert("Пароль введен неправильно");
 }
 
-let userName = prompt("Как тебя зовут?")
-alert(`Привет, ${userName}`);
+let c = 10; 
+
+if (c > 0 && c < 10) {
+  console.log("Верно");
+} else {
+  console.log("Неверно");
+}
+
+let d = 150;
+let e = 50;
+
+if (d > 100 || e > 100) {
+  console.log("Верно");
+} else {
+  console.log("Неверно");
+}
+
+let a = '2';
+let b = '3';
+
+alert(Number(a) + Number(b));
+
+let monthNumber = 12;
+
+if (monthNumber > 12) {
+  alert("Такого месяца не существует");
+} else {
+  switch (monthNumber) {
+    case 12:
+    case 1:
+    case 2:
+      alert("Зима");
+      break;
+    case 3:
+    case 4:
+    case 5:
+      alert("Весна");
+      break;
+    case 6:
+    case 7:
+    case 8:
+      alert("Лето");
+      break;
+    case 9:
+    case 10:
+    case 11:
+      alert("Осень");
+      break;
+  }
+}
