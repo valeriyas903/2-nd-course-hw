@@ -1,59 +1,27 @@
-let password = 'пароль';
-let userPassword = prompt("Введите пароль");
-
-if (userPassword === password) {
-  alert("Пароль введен верно");
-} else {
-  alert("Пароль введен неправильно");
+for (let i = 0; i < 2; i++) {
+  console.log("Привет");
 }
 
-let c = 10; 
-
-if (c > 0 && c < 10) {
-  console.log("Верно");
-} else {
-  console.log("Неверно");
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
 }
 
-let d = 150;
-let e = 50;
-
-if (d > 100 || e > 100) {
-  console.log("Верно");
-} else {
-  console.log("Неверно");
+for (let i = 7; i <= 22; i++) {
+  console.log(i);
 }
 
-let a = '2';
-let b = '3';
+let obj = {
+  "Коля": "200",
+  "Вася": "300",
+  "Петя": "400"
+};
 
-alert(Number(a) + Number(b));
+for (let name in obj) {
+  console.log(`${name}:${obj[name]}`);
+}
 
-let monthNumber = 12;
+let firstFriday = 11; 
 
-if (monthNumber > 12) {
-  alert("Такого месяца не существует");
-} else {
-  switch (monthNumber) {
-    case 12:
-    case 1:
-    case 2:
-      alert("Зима");
-      break;
-    case 3:
-    case 4:
-    case 5:
-      alert("Весна");
-      break;
-    case 6:
-    case 7:
-    case 8:
-      alert("Лето");
-      break;
-    case 9:
-    case 10:
-    case 11:
-      alert("Осень");
-      break;
-  }
+for (let day = firstFriday; day <= 31; day += 7) {
+  console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
 }
