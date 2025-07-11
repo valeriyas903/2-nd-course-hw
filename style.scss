@@ -161,7 +161,8 @@ button:hover {
   &__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 96px 0;
+    padding-bottom: 144px;
+    padding-top: 94px;
     display: flex;
     flex-direction: column;
     color: #ffffff;
@@ -171,15 +172,35 @@ button:hover {
     position: absolute;
     top: 77px;
     right: 0;
-    width: 585px;
     height: 585px;
+    z-index: -1;
+  }
+
+  &__stars-left {
+    position: absolute;
+    top: 770px;
+    left: 25px;
+    z-index: -1;
+  }
+
+  &__stars-right {
+    position: absolute;
+    top: 1563px;
+    right: 45px;
+    z-index: -1;
+  }
+
+  &__stars-bottom {
+    position: absolute;
+    bottom: 45px;
+    right: 52px;
     z-index: -1;
   }
 
   &__title {
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 72px;
   }
 
   &__text-box {
@@ -247,48 +268,41 @@ button:hover {
   }
 
   &__games {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
     margin-top: 96px;
 
     &-container {
       display: flex;
-      flex-direction: row;
-      gap: 32px;
       justify-content: center;
       height: 500px;
       background-color: #fff;
       border-radius: 30px;
-      width: auto;
       margin: 0;
+      margin-bottom: 32px;
     }
 
     &-info {
       display: flex;
       flex-direction: column;
       gap: 36px;
-      width: 100%;
       padding-top: 48px;
       align-items: flex-start;
-      white-space: pre-line;
     }
 
     &-title {
       font-size: 48px;
       font-weight: 700;
       color: #000000;
+      white-space: pre-line;
     }
 
     &-text {
       font-size: 24px;
       font-weight: 400;
       color: #000000;
-      white-space: pre-line;
     }
 
     &-img {
-      max-width: 600px;
+      width: 600px;
       object-fit: cover;
       border-radius: 30px;
       flex-shrink: 0;
@@ -314,6 +328,11 @@ button:hover {
 
 .main__games-container:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.main__games-info:nth-child(2),
+.main__games-info:nth-child(4),
+.main__games-info:nth-child(6) {
   padding-left: 48px;
 }
 
@@ -327,3 +346,5 @@ footer {
   justify-content: center;
   align-content: center;
 }
+
+@import "mobile";
