@@ -1,27 +1,119 @@
-for (let i = 0; i < 2; i++) {
-  console.log("Привет");
+function guessNumberGame() {
+  const secret = 15;
+  let guess = null;
+
+  while (guess !== secret) {
+    guess = Number(prompt("Угадайте число от 1 до 100:"));
+    if (isNaN(guess)) {
+      alert("Пожалуйста, введите число!");
+      continue;
+    }
+    if (guess > secret) {
+      alert("Меньше!");
+    } else if (guess < secret) {
+      alert("Больше!");
+    } else {
+      alert("Поздравляем! Вы угадали!");
+    }
+  }
 }
 
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
+function min(a, b) {
+  return a < b ? a : b;
 }
 
-for (let i = 7; i <= 22; i++) {
-  console.log(i);
+
+console.log(min(8, 4)); 
+console.log(min(6, 6)); 
+
+function checkEvenOdd(n) {
+  return n % 2 === 0 ? 'Число четное' : 'Число нечетное';
 }
 
-let obj = {
-  "Коля": "200",
-  "Вася": "300",
-  "Петя": "400"
+
+console.log(checkEvenOdd(4)); 
+console.log(checkEvenOdd(7)); 
+
+
+function printSquare(n) {
+  console.log(n * n);
+}
+
+function getSquare(n) {
+  return n * n;
+}
+
+printSquare(12); 
+
+let result = getSquare(12);
+console.log(result);
+
+function checkAge() {
+  let age = Number(prompt("Сколько вам лет?"));
+  if (age < 0) {
+    alert("Вы ввели неправильное значение");
+  } else if (age >= 0 && age <= 12) {
+    alert("Привет, друг!");
+  } else if (age >= 13) {
+    alert("Добро пожаловать!");
+  } else {
+    alert("Вы ввели неправильное значение");
+  }
+}
+
+checkAge();
+
+function multNum(a, b) {
+  if (isNaN(Number(a)) || isNaN(Number(b))) {
+    return 'Одно или оба значения не являются числом';
+  }
+  return Number(a) * Number(b);
+}
+
+
+console.log(multNum(3, 5));       
+console.log(multNum('a', 4));    
+
+function cubeNumber() {
+  let input = prompt("Введите число:");
+  let n = Number(input);
+
+  if (isNaN(n)) {
+    return 'Переданный параметр не является числом';
+  } else {
+    return `${n} в кубе равняется ${n ** 3}`;
+  }
+}
+
+for (let i = 0; i <= 10; i++) {
+  console.log(cubeNumber(i));
+}
+
+alert(cubeNumber());
+
+const circle1 = {
+  radius: 5,
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
 };
 
-for (let name in obj) {
-  console.log(`${name}:${obj[name]}`);
-}
+const circle2 = {
+  radius: 10,
+  getArea: function() {
+    return Math.PI * this.radius * this.radius;
+  },
+  getPerimeter: function() {
+    return 2 * Math.PI * this.radius;
+  }
+};
 
-let firstFriday = 11; 
 
-for (let day = firstFriday; day <= 31; day += 7) {
-  console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
-}
+console.log(circle1.getArea());      
+console.log(circle1.getPerimeter()); 
+
+console.log(circle2.getArea());      
+console.log(circle2.getPerimeter()); 
