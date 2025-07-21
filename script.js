@@ -1,27 +1,24 @@
-for (let i = 0; i < 2; i++) {
-  console.log("Привет");
-}
+function guessNumberGame() {
+  const secret = Math.floor(Math.random() * 100) + 1;
+  let guess = null;
 
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
-}
-
-for (let i = 7; i <= 22; i++) {
-  console.log(i);
-}
-
-let obj = {
-  "Коля": "200",
-  "Вася": "300",
-  "Петя": "400"
-};
-
-for (let name in obj) {
-  console.log(`${name}:${obj[name]}`);
-}
-
-let firstFriday = 11; 
-
-for (let day = firstFriday; day <= 31; day += 7) {
-  console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
+  while (guess !== secret) {
+    const input = prompt("Угадайте число от 1 до 100:");
+    if (input === null) {
+      alert("Вы вышли из игры.");
+      return;
+    }
+    guess = Number(input);
+    if (isNaN(guess)) {
+      alert("Пожалуйста, введите число!");
+      continue;
+    }
+    if (guess > secret) {
+      alert("Меньше!");
+    } else if (guess < secret) {
+      alert("Больше!");
+    } else {
+      alert("Поздравляем! Вы угадали!");
+    }
+  }
 }
