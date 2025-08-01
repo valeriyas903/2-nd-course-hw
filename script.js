@@ -66,3 +66,57 @@ function simpleArithmeticGame() {
     alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
   }
 }
+
+
+
+function rockPaperScissors() {
+  const choices = ["камень", "ножницы", "бумага"];
+  
+
+  const userChoice = prompt("Выберите: камень, ножницы или бумага?\n(Нажмите Отмена для выхода)");
+  
+
+  if (userChoice === null) {
+    alert("Вы вышли из игры.");
+    return;
+  }
+  
+  const normalizedChoice = userChoice.toLowerCase().trim();
+  
+  
+  if (!choices.includes(normalizedChoice)) {
+    alert("Некорректный ввод! Пожалуйста, выберите камень, ножницы или бумагу.");
+    return rockPaperScissors(); 
+  }
+  
+ 
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  
+
+  let result;
+  
+  if (normalizedChoice === computerChoice) {
+    result = "Ничья!";
+  } else if (
+    (normalizedChoice === "камень" && computerChoice === "ножницы") ||
+    (normalizedChoice === "ножницы" && computerChoice === "бумага") ||
+    (normalizedChoice === "бумага" && computerChoice === "камень")
+  ) {
+    result = "Вы победили!";
+  } else {
+    result = "Компьютер победил!";
+  }
+  
+  
+  alert(`
+    Ваш выбор: ${normalizedChoice}
+    Выбор компьютера: ${computerChoice}
+    Результат: ${result}
+  `);
+  
+ 
+  if (confirm("Хотите сыграть ещё?")) {
+    rockPaperScissors();
+  }
+}
+
