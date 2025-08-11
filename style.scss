@@ -134,7 +134,7 @@ button:hover {
   &__title {
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   &__text {
@@ -170,7 +170,7 @@ button:hover {
 
   &__img-star {
     position: absolute;
-    top: 77px;
+    top: 110px;
     right: 0;
     height: 585px;
     z-index: -1;
@@ -192,7 +192,7 @@ button:hover {
 
   &__stars-bottom {
     position: absolute;
-    bottom: 45px;
+    bottom: 65px;
     right: 52px;
     z-index: -1;
   }
@@ -200,7 +200,7 @@ button:hover {
   &__title {
     font-size: 64px;
     font-weight: 700;
-    margin-bottom: 72px;
+    margin-bottom: 29px;
   }
 
   &__text-box {
@@ -246,8 +246,7 @@ button:hover {
   }
 
   &__container-text {
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 40px;
     font-size: 16px;
     font-weight: 500;
     color: #000000;
@@ -260,7 +259,7 @@ button:hover {
   }
 
   &__container-title {
-    padding-left: 32px;
+    padding: 16px 32px 36px 32px;
     font-size: 32px;
     font-weight: 700;
     color: #000000;
@@ -269,6 +268,11 @@ button:hover {
 
   &__games {
     margin-top: 96px;
+
+    &-box {
+      margin-top: 70px;
+      margin-bottom: -25px;
+    }
 
     &-container {
       display: flex;
@@ -284,8 +288,8 @@ button:hover {
       display: flex;
       flex-direction: column;
       gap: 36px;
-      padding-top: 48px;
-      align-items: flex-start;
+      padding: 48px 48px 0 48px;
+      
     }
 
     &-title {
@@ -323,18 +327,13 @@ button:hover {
 .main__container-article:nth-child(4),
 .main__container-article:nth-child(6) {
   height: 551px;
-  margin-top: -40px;
+  margin-top: -36px;
 }
 
 .main__games-container:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.main__games-info:nth-child(2),
-.main__games-info:nth-child(4),
-.main__games-info:nth-child(6) {
-  padding-left: 48px;
-}
 
 footer {
   background-color: #bded35;
