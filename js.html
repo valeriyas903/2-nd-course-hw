@@ -8,7 +8,85 @@
 </head>
 
 <body>
-    <script src="functions.js"></script>
+    <h1 id="mainTitle">Lorem ipsum dolor sit amet</h1>
+    <button id="toggleTitleBtn" type="button">Скрыть</button>
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi debitis expedita consequatur quos
+        eaque cum quas ratione adipisci rerum repellendus eveniet consequuntur, minus illo rem quo voluptate culpa
+        libero sunt!</p>
+    <button id="changeColorText" type="button">Изменить цвет текста</button>
+    <h2 id="changeText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+    <button id="changeTextBtn" type="button">Изменить текст</button>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis impedit non beatae
+        commodi iusto. Culpa veritatis blanditiis et, libero est optio quae veniam maxime temporibus, fugit illo
+        deserunt accusamus?</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor veritatis quis
+        eveniet quod eos aliquam id sint velit. Modi doloremque veniam nesciunt? Vel sequi consequatur totam sapiente
+        eius aliquid?</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias earum dolore asperiores
+        unde eligendi rem esse harum, dolorum voluptates, reiciendis at doloremque dolorem cum repellat tempora,
+        praesentium maiores minus.</p>
+    <p class="content"></p>
+    <p class="description2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, suscipit.</p>
+    <p class="description2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque officia soluta quod
+        ut, voluptatem minima vel tenetur illum illo quaerat amet ex eum itaque impedit libero quae ducimus reiciendis.
+    </p>
+    <p class="description2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Doloribus,
+        cumque. Quasi, asperiores. Doloremque, voluptatibus. Quisquam, voluptatum. Doloribus, cumque. Quasi, asperiores.
+        Doloremque, voluptatibus.</p>
+    <p class="content">Lorem ipsum dolor sit amet.</p>
+    <p class="description2">Lorem, ipsum dolor.</p>
+    <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <button id="addParagraphBtn" type="button">Добавить параграф</button>
+    <button id="deleteBtn" type="button">Удалить</button>
+    <script>
+        const title = document.querySelector('#mainTitle');
+        const btn = document.querySelector('#toggleTitleBtn');
+
+        btn.addEventListener('click', function () {
+            if (title.style.display === 'none') {
+                title.style.display = '';
+                btn.textContent = 'Скрыть';
+            } else {
+                title.style.display = 'none';
+                btn.textContent = 'Показать';
+            }
+        });
+        const changeColorText = document.querySelector('#changeColorText');
+        const text = document.querySelector('.text');
+        changeColorText.addEventListener('click', function () {
+            text.style.color = 'blue';
+        });
+        const changeText = document.querySelector('#changeText');
+        const changeTextBtn = document.querySelector('#changeTextBtn');
+        changeTextBtn.addEventListener('click', function () {
+            changeText.textContent = 'Привет, мир!';
+
+        });
+        const descriptions = document.querySelectorAll('.description');
+        descriptions.forEach((description) => {
+            description.textContent = 'Измененный текст';
+        });
+        const description2s = document.querySelectorAll('.description2');
+        description2s.forEach((description2) => {
+            description2.textContent = 'Новый текст';
+        });
+
+        const addParagraphBtn = document.querySelector('#addParagraphBtn');
+        addParagraphBtn.addEventListener('click', function () {
+            const newP = document.createElement('p');
+            newP.textContent = 'Новый абзац';
+            document.body.appendChild(newP);
+        });
+
+        const deleteBtn = document.querySelector('#deleteBtn');
+        deleteBtn.addEventListener('click', function () {
+            const firstDescription = document.querySelector('.description');
+            if (firstDescription) {
+                firstDescription.remove();
+            }
+        });
+
+    </script>
 </body>
 
 </html>

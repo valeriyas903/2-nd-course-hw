@@ -125,7 +125,7 @@ button:hover {
 .top__title {
   font-size: 64px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .top__text {
   font-size: 24px;
@@ -157,7 +157,7 @@ button:hover {
 }
 .main__img-star {
   position: absolute;
-  top: 77px;
+  top: 110px;
   right: 0;
   height: 585px;
   z-index: -1;
@@ -176,14 +176,14 @@ button:hover {
 }
 .main__stars-bottom {
   position: absolute;
-  bottom: 45px;
+  bottom: 65px;
   right: 52px;
   z-index: -1;
 }
 .main__title {
   font-size: 64px;
   font-weight: 700;
-  margin-bottom: 72px;
+  margin-bottom: 29px;
 }
 .main__text-box {
   margin-bottom: 72px;
@@ -223,8 +223,7 @@ button:hover {
   display: block;
 }
 .main__container-text {
-  margin-top: 32px;
-  margin-bottom: 16px;
+  margin-top: 40px;
   font-size: 16px;
   font-weight: 500;
   color: #000000;
@@ -236,7 +235,7 @@ button:hover {
   padding: 8px 16px 10px 16px;
 }
 .main__container-title {
-  padding-left: 32px;
+  padding: 16px 32px 36px 32px;
   font-size: 32px;
   font-weight: 700;
   color: #000000;
@@ -244,6 +243,10 @@ button:hover {
 }
 .main__games {
   margin-top: 96px;
+}
+.main__games-box {
+  margin-top: 70px;
+  margin-bottom: -25px;
 }
 .main__games-container {
   display: flex;
@@ -258,8 +261,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding-top: 48px;
-  align-items: flex-start;
+  padding: 48px 48px 0 48px;
 }
 .main__games-title {
   font-size: 48px;
@@ -293,17 +295,11 @@ button:hover {
 .main__container-article:nth-child(4),
 .main__container-article:nth-child(6) {
   height: 551px;
-  margin-top: -40px;
+  margin-top: -36px;
 }
 
 .main__games-container:nth-child(even) {
   flex-direction: row-reverse;
-}
-
-.main__games-info:nth-child(2),
-.main__games-info:nth-child(4),
-.main__games-info:nth-child(6) {
-  padding-left: 48px;
 }
 
 footer {
@@ -376,6 +372,10 @@ footer {
   .main__games {
     margin-top: 48px;
     align-content: center;
+  }
+  .main__games-box {
+    margin-top: 48px;
+    margin-bottom: 10px;
   }
   .main__games-title {
     font-size: 32px;
