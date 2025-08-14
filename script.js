@@ -155,5 +155,5 @@ const colorBtn = document.getElementById('colorBtn');
            
             document.body.style.backgroundColor = randomColor;
             
-            alert(`Фон страницы изменен`);
+        
         });
